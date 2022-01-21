@@ -6,7 +6,7 @@ metadata:
   name: flakey
   namespace: flakey
 spec:
-  replicas: 8
+  replicas: '${ \#toInt(execution.trigger.parameters.deployment_replicas) }'
   selector:
     matchLabels:
       app: flakey
