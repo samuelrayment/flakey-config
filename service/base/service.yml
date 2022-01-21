@@ -12,3 +12,17 @@ spec:
     app: flakey
     stage: '${service_stage}'
   type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flakey
+  namespace: flakey
+spec:
+  ports:
+    - port: 8000
+      protocol: TCP
+      targetPort: 8000
+  selector:
+    app: flakey
+  type: ClusterIP
