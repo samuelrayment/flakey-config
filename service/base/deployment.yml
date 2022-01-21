@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: flakey
-  name: flakey
+  name: 'flakey${deployment-suffix}'
   namespace: flakey
 spec:
   replicas: '${ #toInt(replicas) }'
@@ -22,7 +22,7 @@ spec:
       containers:
         - envFrom:
             - configMapRef:
-                name: config
+                name: 'config${config-suffix}'
           image: 'bestriped/flakey-test:0.5'
           livenessProbe:
             failureThreshold: 5
