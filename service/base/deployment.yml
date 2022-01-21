@@ -23,7 +23,7 @@ spec:
         - envFrom:
             - configMapRef:
                 name: config
-          image: 'bestriped/flakey-test:0.4'
+          image: 'bestriped/flakey-test:0.5'
           livenessProbe:
             failureThreshold: 5
             httpGet:
