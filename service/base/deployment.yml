@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: flakey
-      stage: '${service_stage}'
   template:
     metadata:
       annotations:
@@ -20,6 +19,7 @@ spec:
         prometheus.io/scrape: 'true'
       labels:
         app: flakey
+        stage: '${service_stage}'
     spec:
       containers:
         - envFrom:
