@@ -6,7 +6,7 @@ metadata:
   name: flakey
   namespace: flakey
 spec:
-  replicas: ${ execution.trigger.parameters.stack }
+  replicas: ${ execution.trigger.parameters.deployment_replicas }
   selector:
     matchLabels:
       app: flakey
