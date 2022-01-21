@@ -10,6 +10,7 @@ spec:
   selector:
     matchLabels:
       app: flakey
+      stage: '${service_stage}'
   template:
     metadata:
       annotations:
