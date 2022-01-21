@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: flakey
+  namespace: flakey
+spec:
+  rules:
+    - host: flakey.stg.diginf.musicradio.com
+      http:
+        paths:
+          - backend:
+              serviceName: flakey
+              servicePort: 8000
+            path: /
