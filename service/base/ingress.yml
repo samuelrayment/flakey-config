@@ -5,6 +5,8 @@ metadata:
   namespace: flakey
   annotations:
     kubernetes.io/ingress.class: haproxy
+    ingress.kubernetes.io/ssl-redirect: false
+    ingress.kubernetes.io/service-upstream: true
 spec:
   rules:
     - host: flakey.stg.diginf.musicradio.com
