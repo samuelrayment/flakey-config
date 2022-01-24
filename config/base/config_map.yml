@@ -6,7 +6,7 @@ metadata:
 data:
   FAILURE_RATE: '0'
   REDIS_URL: 'redis://redis.flakey:6379/0'
-  VERSION: '9'
+  VERSION: '10'
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -15,4 +15,4 @@ metadata:
   namespace: flakey
 data:
   REDIS_URL: 'redis://redis.flakey:6379/0'
-  VERSION: '9'
+  VERSION: '10'
