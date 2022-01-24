@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: flakey
   namespace: flakey
+  annotations:
+    kubernetes.io/ingress.class: haproxy
 spec:
   rules:
     - host: flakey.stg.diginf.musicradio.com
