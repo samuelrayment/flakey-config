@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: flakey
+    stage: '${service_stage}'
   name: 'flakey${deployment_suffix}'
   namespace: flakey
 spec:

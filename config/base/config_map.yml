@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: 'config${config_suffix}'
   namespace: flakey
+  labels:
+    stage: '${service_stage}'
 data:
   FAILURE_RATE: '0'
   REDIS_URL: 'redis://redis.flakey:6379/0'
@@ -13,6 +15,8 @@ kind: ConfigMap
 metadata:
   name: 'config-migrate${config_suffix}'
   namespace: flakey
+  labels:
+    stage: '${service_stage}'
 data:
   REDIS_URL: 'redis://redis.flakey:6379/0'
   VERSION: '10'
