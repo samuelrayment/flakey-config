@@ -6,7 +6,7 @@ metadata:
   labels:
     stage: '${service_stage}'
 data:
-  FAILURE_RATE: '50'
+  FAILURE_RATE: '10'
   REDIS_URL: 'redis://redis.flakey:6379/0'
   VERSION: '10'
 ---
